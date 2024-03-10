@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1..
+        let obj1 = {
+            made: "Mitsubishi"
+            , year: 2018
+            , model: "Mitsubishi Lancer "
+            , midspeed: 60
+        };
+
+        function info() {
+            alert(`производитель: ${obj1.made}; год производства: ${obj1.year}; модель: ${obj1.model}; средняя скорость: ${obj1.midspeed};`)
+        }
+
+        function time(km) {
+            let hour = km / 60
+            let rest = Math.floor(hour / 4)
+            if (hour % 4 == 0) {
+                let full = hour + rest - 1;
+                alert(full)
+            }
+            else {
+                let full = hour + rest;
+                alert(full)
+            }
+        }
+        info()
+        time(240)
+            //2..
+        let obj2 = {
+            chislitel: 5
+            , znamenatel: 15
+        };
+        let obj3 = {
+            chislitel: 3
+            , znamenatel: 4
+        };
+
+        function plus() {
+            let plus1 = (obj2.chislitel / obj2.znamenatel) + (obj3.chislitel / obj3.znamenatel)
+            alert(plus1)
+        }
+
+        function minus() {
+            let minus1 = (obj2.chislitel / obj2.znamenatel) - (obj3.chislitel / obj3.znamenatel)
+            alert(minus1)
+        }
+
+        function umn() {
+            let umn1 = (obj2.chislitel / obj2.znamenatel) * (obj3.chislitel / obj3.znamenatel)
+            alert(umn1)
+        }
+
+        function delen() {
+            let delen1 = (obj2.chislitel / obj2.znamenatel) / (obj3.chislitel / obj3.znamenatel)
+            alert(delen1)
+        }
+
+        function sokr() {
+            let M = obj2.chislitel;
+            let N = obj2.znamenatel
+            for (let i = 2; i <= obj2.chislitel; i++) {
+                5
+                if (obj2.chislitel % i === 0 && obj2.znamenatel % i === 0) 6
+                M = obj2.chislitel / i
+                N = obj2.znamenatel / i;
+                7
+            }
+            alert([M, N])
+        }
+        plus()
+        minus()
+        umn()
+        delen()
+        sokr()
+            //3..
+        let tim = {
+            hour: 5
+            , minut: 59
+            , sec: 59
+        };
+        function alertyou(){
+            alert(`${tim.hour}:${tim.minut}:${tim.sec}`)
+        }
+        function changetime(seconds){
+             tim.sec += seconds;
+        tim.minut += Math.floor(tim.sec / 60);
+        tim.sec %= 60;
+        tim.hour += Math.floor(tim.minut / 60);
+        tim.minut %= 60;
+        tim.hour %= 24;
+            alertyou()
+        }
+        alertyou()
+        changetime(50)
+    </script>
+</body>
+
+</html>
